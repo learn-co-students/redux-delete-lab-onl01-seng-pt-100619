@@ -25,7 +25,6 @@ describe('Bands Component', () => {
         { id: 3, text: 'Cool Runnings' }
       ]
     });
-
     const wrapper = mount(<Provider store={store}><App /></Provider>)
     expect(wrapper.find('li')).to.have.length(3);
   });
@@ -127,7 +126,6 @@ describe('Band Component with Redux', () => {
 
     let deleteButton = wrapper.find('button').first();
     deleteButton.simulate('click', { preventDefault() {} });
-
     expect(store.getState().bands.length).to.equal(1);
     expect(store.getState().bands[0].name).to.equal('Brian Eno');
   });
