@@ -9,7 +9,7 @@ class Band extends Component {
   render() {
     return(
       <div>
-        
+        Band Component
         <li>{this.props.name}</li>
         <button onClick={this.handleClick}></button>
         
